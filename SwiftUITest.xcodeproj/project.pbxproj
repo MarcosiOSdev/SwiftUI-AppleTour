@@ -15,6 +15,8 @@
 		283986CE22B1A5F30027DE25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 283986CC22B1A5F30027DE25 /* LaunchScreen.storyboard */; };
 		283986D922B1A5F30027DE25 /* SwiftUITestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283986D822B1A5F30027DE25 /* SwiftUITestTests.swift */; };
 		283986E422B1A5F30027DE25 /* SwiftUITestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283986E322B1A5F30027DE25 /* SwiftUITestUITests.swift */; };
+		283986F222B1E54C0027DE25 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283986F122B1E54C0027DE25 /* CircleImage.swift */; };
+		283986F422B1E6300027DE25 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283986F322B1E6300027DE25 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		283986DF22B1A5F30027DE25 /* SwiftUITestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUITestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		283986E322B1A5F30027DE25 /* SwiftUITestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITestUITests.swift; sourceTree = "<group>"; };
 		283986E522B1A5F30027DE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		283986F122B1E54C0027DE25 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		283986F322B1E6300027DE25 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +103,9 @@
 		283986C022B1A5F00027DE25 /* SwiftUITest */ = {
 			isa = PBXGroup;
 			children = (
-				283986C122B1A5F00027DE25 /* AppDelegate.swift */,
-				283986C322B1A5F00027DE25 /* SceneDelegate.swift */,
-				283986C522B1A5F00027DE25 /* ContentView.swift */,
-				283986C722B1A5F30027DE25 /* Assets.xcassets */,
-				283986CC22B1A5F30027DE25 /* LaunchScreen.storyboard */,
-				283986CF22B1A5F30027DE25 /* Info.plist */,
+				283986F722B1E94D0027DE25 /* AppConfigs */,
+				283986F622B1E93B0027DE25 /* Supporting File */,
+				283986F522B1E8D20027DE25 /* Views */,
 				283986C922B1A5F30027DE25 /* Preview Content */,
 			);
 			path = SwiftUITest;
@@ -134,6 +135,35 @@
 				283986E522B1A5F30027DE25 /* Info.plist */,
 			);
 			path = SwiftUITestUITests;
+			sourceTree = "<group>";
+		};
+		283986F522B1E8D20027DE25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				283986C522B1A5F00027DE25 /* ContentView.swift */,
+				283986F122B1E54C0027DE25 /* CircleImage.swift */,
+				283986F322B1E6300027DE25 /* MapView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		283986F622B1E93B0027DE25 /* Supporting File */ = {
+			isa = PBXGroup;
+			children = (
+				283986C722B1A5F30027DE25 /* Assets.xcassets */,
+				283986CC22B1A5F30027DE25 /* LaunchScreen.storyboard */,
+				283986CF22B1A5F30027DE25 /* Info.plist */,
+			);
+			path = "Supporting File";
+			sourceTree = "<group>";
+		};
+		283986F722B1E94D0027DE25 /* AppConfigs */ = {
+			isa = PBXGroup;
+			children = (
+				283986C122B1A5F00027DE25 /* AppDelegate.swift */,
+				283986C322B1A5F00027DE25 /* SceneDelegate.swift */,
+			);
+			path = AppConfigs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +298,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				283986C222B1A5F00027DE25 /* AppDelegate.swift in Sources */,
+				283986F222B1E54C0027DE25 /* CircleImage.swift in Sources */,
+				283986F422B1E6300027DE25 /* MapView.swift in Sources */,
 				283986C422B1A5F00027DE25 /* SceneDelegate.swift in Sources */,
 				283986C622B1A5F00027DE25 /* ContentView.swift in Sources */,
 			);
@@ -437,7 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "SwiftUITest/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SwiftUITest/Info.plist;
+				INFOPLIST_FILE = "SwiftUITest/Supporting File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "SwiftUITest/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SwiftUITest/Info.plist;
+				INFOPLIST_FILE = "SwiftUITest/Supporting File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
