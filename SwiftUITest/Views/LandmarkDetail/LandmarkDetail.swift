@@ -8,49 +8,51 @@
 
 import SwiftUI
 
-struct ContentView : View
-{
+struct LandmarkDetail : View {
     
-    var title: String { return "Marcos Felipe" }
-    var subtitle: String { "Brazilian" }
-    var occupation: String { "iOS Developer" }
+    var landmark: Landmark
+    
+//    var title: String { return "Marcos Felipe" }
+//    var subtitle: String { "Brazilian" }
+//    var occupation: String { "iOS Developer" }
     
     var body: some View {
         VStack {
-            MapView()
+            
+            MapView(coordinate: landmark.locationCoordinate)
                 .edgesIgnoringSafeArea(.top)
                 .frame(height: 300)
             
-            CircleImage()
+            CircleImage(image: landmark.image)
                 .offset(y: -130)
                 .padding(.bottom, -130)
             
             VStack(alignment: .leading) {
-                Text(title)
+                Text(landmark.name)
                     .font(.title)
                     .bold()
                 HStack(alignment: .top) {
-                    Text(subtitle)
+                    Text(landmark.park)
                         .italic()
                         .font(.subheadline)
                     
                     Spacer()
-                    Text(occupation)
+                    Text(landmark.state)
                         .font(.subheadline)
                 }
-            }.padding()
+            }
+            .padding()
             
             Spacer()
         }
+        .navigationBarTitle(Text(landmark.name), displayMode: .inline)
     }
 }
 
 #if DEBUG
-struct ContentView_Previews : PreviewProvider
-{
-    static var previews: some View
-    {
-        ContentView()
+struct LandmarkDetail_Previews : PreviewProvider {
+    static var previews: some View {
+        LandmarkDetail(landmark: landmarkData[0])
     }
 }
 #endif
