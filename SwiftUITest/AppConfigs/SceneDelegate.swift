@@ -26,7 +26,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = scene as? UIWindowScene else { return }
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = UIHostingController(rootView: LandmarkList())
+        window.rootViewController = UIHostingController(
+            rootView: LandmarkList()
+                .environmentObject(UserData())
+        )
         self.window = window
         window.makeKeyAndVisible()
     }

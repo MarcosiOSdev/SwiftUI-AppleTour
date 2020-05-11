@@ -9,20 +9,6 @@
 import SwiftUI
 import CoreLocation
 
-
-/*{
-    "name": "Turtle Rock",
-    "category": "Featured",
-    "city": "Twentynine Palms",
-    "state": "California",
-    "id": 1001,
-    "park": "Joshua Tree National Park",
-    "coordinates": {
-        "longitude": -116.166868,
-        "latitude": 34.011286
-    },
-    "imageName": "turtlerock"
-},*/
 struct Landmark: Hashable, Codable, Identifiable {
     
     var id: Int
@@ -32,6 +18,8 @@ struct Landmark: Hashable, Codable, Identifiable {
     var state: String
     var park: String
     var category: Category
+    
+    var isFavorite: Bool
     
     enum CodingsKey: String, CodingKey {
         case id, name, state, park, category, coordinates, imageName, city
@@ -46,6 +34,7 @@ struct Landmark: Hashable, Codable, Identifiable {
         case featured = "Featured"
         case lakes = "Lakes"
         case rivers = "Rivers"
+        case mountains = "Mountains"
     }
 }
 
