@@ -17,7 +17,9 @@ struct HikeBadge: View {
             .scaleEffect( 1.0 / 3.0)
             .frame(width: 100, height: 100)
             
-            Text(name).font(.caption).accessibility(label: Text("Badge for \(name)"))
+            Text(name)
+                .font(.caption)
+                .accessibility(label: Text("Badge for \(name)"))
         }
     }
 }
