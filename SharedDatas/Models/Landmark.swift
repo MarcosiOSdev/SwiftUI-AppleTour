@@ -18,9 +18,10 @@ struct Landmark: Hashable, Codable, Identifiable {
     var state: String
     var park: String
     var category: Category
-    
     var isFavorite: Bool
     var isFeatured: Bool
+    var description: String
+
     
     enum CodingsKey: String, CodingKey {
         case id, name, state, park, category, coordinates, imageName, city

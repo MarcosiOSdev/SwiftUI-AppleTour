@@ -11,14 +11,15 @@ import SwiftUI
 struct CircleImage : View {
     
     var image: Image
-    
+    var shadowRadius: CGFloat = 10
+
     var body: some View {
         
         image
             .scaledToFill()
             .clipShape(Circle())
             .overlay(Circle().stroke(Color.white, lineWidth: 4))
-            .shadow(radius: 10)
+            .shadow(radius: shadowRadius)
     }
 }
 
