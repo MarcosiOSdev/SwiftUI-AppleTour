@@ -32,7 +32,7 @@ struct ProfileEditor: View {
             VStack(alignment: .leading) {
                 Text("Seasonal Photo").bold()
                 
-                Picker("Seasonal Photo", selection: $profile.seasonalPhoto) {
+                Picker("", selection: $profile.seasonalPhoto) {
                     ForEach(Profile.Season.allCases, id: \.self) { season in
                         Text(season.rawValue).tag(season)
                     }
@@ -42,9 +42,8 @@ struct ProfileEditor: View {
             .padding(.top)
             
             VStack {
-                Text("Goal Date").bold()
-                
-                DatePicker("Goal Date",
+                Text("Goal Date").bold()                
+                DatePicker("",
                            selection: $profile.goalDate,
                            in: dateRange,
                            displayedComponents: .date)
