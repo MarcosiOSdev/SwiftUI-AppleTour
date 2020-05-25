@@ -355,7 +355,6 @@
 			children = (
 				282B948E247A0C52002A960C /* Views */,
 				282B9465247A07DF002A960C /* AppDelegate.swift */,
-				282B9467247A07DF002A960C /* ContentView.swift */,
 				282B9469247A07E7002A960C /* Assets.xcassets */,
 				282B946E247A07E7002A960C /* Main.storyboard */,
 				282B9471247A07E7002A960C /* Info.plist */,
@@ -396,6 +395,7 @@
 		282B948E247A0C52002A960C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				282B9467247A07DF002A960C /* ContentView.swift */,
 				282B948F247A0C5C002A960C /* LandmarkRow.swift */,
 				28E42132247AF7E900BF24B7 /* LandmarkList.swift */,
 				28E42134247B043300BF24B7 /* Filter.swift */,
